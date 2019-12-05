@@ -10,6 +10,9 @@ namespace R5T.Gothonia
         TextItemTypeIdentity New();
         TextItemTypeIdentity New(string name);
 
+        /// <summary>
+        /// Returns void to indicate that the identity of the input must be set.
+        /// </summary>
         void Add(TextItemType textItemType);
 
         bool Exists(TextItemTypeIdentity identity);
