@@ -16,6 +16,10 @@ namespace R5T.Gothonia
         void Add(TextItemType textItemType);
 
         bool Exists(TextItemTypeIdentity identity);
+        bool Exists(string name);
+
+        TextItemTypeIdentity GetIdentity(string name);
+        TextItemType Get(string name);
 
         TextItemType Get(TextItemTypeIdentity identity);
 
