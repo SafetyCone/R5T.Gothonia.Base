@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 using R5T.Siscia;
 
@@ -7,25 +8,25 @@ namespace R5T.Gothonia
 {
     public interface ITextItemTypeRepository
     {
-        TextItemTypeIdentity New();
-        TextItemTypeIdentity New(string name);
+        Task<TextItemTypeIdentity> New();
+        Task<TextItemTypeIdentity> New(string name);
 
         /// <summary>
         /// Returns void to indicate that the identity of the input must be set.
         /// </summary>
-        void Add(TextItemType textItemType);
+        Task Add(TextItemType textItemType);
 
-        bool Exists(TextItemTypeIdentity identity);
-        bool Exists(string name);
+        Task<bool> Exists(TextItemTypeIdentity identity);
+        Task<bool> Exists(string name);
 
-        TextItemTypeIdentity GetIdentity(string name);
-        TextItemType Get(string name);
+        Task<TextItemTypeIdentity> GetIdentity(string name);
+        Task<TextItemType> Get(string name);
 
-        TextItemType Get(TextItemTypeIdentity identity);
+        Task<TextItemType> Get(TextItemTypeIdentity identity);
 
-        void SetName(TextItemTypeIdentity identity, string name);
-        string GetName(TextItemTypeIdentity identity);
+        Task SetName(TextItemTypeIdentity identity, string name);
+        Task<string> GetName(TextItemTypeIdentity identity);
 
-        void Delete(TextItemTypeIdentity identity);
+        Task Delete(TextItemTypeIdentity identity);
     }
 }
