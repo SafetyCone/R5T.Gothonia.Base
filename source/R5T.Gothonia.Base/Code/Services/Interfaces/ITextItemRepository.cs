@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 using R5T.Siscia;
@@ -22,5 +23,7 @@ namespace R5T.Gothonia
         Task<string> GetValue(TextItemIdentity identity);
 
         Task Delete(TextItemIdentity identity);
+
+        Task<IEnumerable<(string TypeName, string Value)>> GetTypedValuesAsync(IEnumerable<TextItemIdentity> textItemIdentities);
     }
 }
