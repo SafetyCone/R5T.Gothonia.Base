@@ -19,7 +19,6 @@ namespace R5T.Gothonia
         Task SetItemType(TextItemIdentity identity, TextItemTypeIdentity typeIdentity);
         Task<TextItemTypeIdentity> GetItemType(TextItemIdentity identity);
 
-        Task SetValue(TextItemTypeIdentity identity, string value);
         Task SetValue(TextItemIdentity identity, string value);
         Task<string> GetValue(TextItemIdentity identity);
 
