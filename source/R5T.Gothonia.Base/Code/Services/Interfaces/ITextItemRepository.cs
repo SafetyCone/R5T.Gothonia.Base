@@ -24,6 +24,6 @@ namespace R5T.Gothonia
 
         Task Delete(TextItemIdentity identity);
 
-        Task<IEnumerable<(string TypeName, string Value)>> GetTypedValuesAsync(IEnumerable<TextItemIdentity> textItemIdentities);
+        Task<List<(string TypeName, string Value)>> GetTypedValuePairs(IEnumerable<TextItemIdentity> textItemIdentities);
     }
 }
